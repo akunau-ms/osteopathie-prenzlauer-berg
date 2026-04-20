@@ -1,6 +1,7 @@
 <script>
   import { siteContent } from '$lib/data/content.js';
   import { page } from '$app/state';
+  import { base } from '$app/paths';
 
   let { nav, praxis } = siteContent;
 
@@ -25,7 +26,7 @@
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16 lg:h-20">
       <!-- Logo -->
-      <a href="/" onclick={closeMenu} class="flex flex-col leading-tight group">
+      <a href="{base}/" onclick={closeMenu} class="flex flex-col leading-tight group">
         <span
           class="font-serif text-lg font-bold transition-colors duration-200"
           class:text-primary-800={scrolled}
@@ -46,7 +47,7 @@
       <nav class="hidden lg:flex items-center gap-6" aria-label="Hauptnavigation">
         {#each nav as item}
           <a
-            href={item.href}
+            href="{base}{item.href}"
             class="text-sm font-medium tracking-wide transition-colors duration-200 relative after:absolute after:bottom-[-2px] after:left-0 after:h-0.5 after:bg-gold-500 after:transition-all after:duration-200"
             class:text-white={!scrolled}
             class:text-neutral-700={scrolled}
@@ -59,7 +60,7 @@
           </a>
         {/each}
         <a
-          href="/kontakt"
+          href="{base}/kontakt"
           class="ml-2 px-4 py-2 rounded-full text-sm font-semibold bg-primary-700 text-white hover:bg-primary-600 transition-colors duration-200 shadow-sm"
         >
           Termin
@@ -92,7 +93,7 @@
       <nav class="max-w-6xl mx-auto px-4 py-4 flex flex-col gap-1" aria-label="Mobile Navigation">
         {#each nav as item}
           <a
-            href={item.href}
+            href="{base}{item.href}"
             onclick={closeMenu}
             class="px-4 py-3 rounded-lg text-sm font-medium text-neutral-700 hover:bg-primary-50 hover:text-primary-800 transition-colors duration-150"
             class:bg-primary-50={page.url.pathname === item.href}
@@ -102,7 +103,7 @@
           </a>
         {/each}
         <a
-          href="/kontakt"
+          href="{base}/kontakt"
           onclick={closeMenu}
           class="mt-2 px-4 py-3 rounded-full text-sm font-semibold text-center bg-primary-700 text-white hover:bg-primary-600 transition-colors duration-150"
         >

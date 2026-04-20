@@ -3,6 +3,7 @@
   import Header from '$lib/components/Header.svelte';
   import Footer from '$lib/components/Footer.svelte';
   import { siteContent } from '$lib/data/content.js';
+  import { base } from '$app/paths';
 
   let { children } = $props();
   let { praxis } = siteContent;

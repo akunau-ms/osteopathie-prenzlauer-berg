@@ -1,5 +1,6 @@
 <script>
   import { siteContent } from '$lib/data/content.js';
+  import { base } from '$app/paths';
   let { praxis, nav } = siteContent;
 </script>
 
@@ -52,7 +53,7 @@
         <ul class="space-y-2 text-sm">
           {#each nav as item}
             <li>
-              <a href={item.href} class="hover:text-gold-400 transition-colors duration-150">{item.label}</a>
+              <a href="{base}{item.href}" class="hover:text-gold-400 transition-colors duration-150">{item.label}</a>
             </li>
           {/each}
         </ul>
@@ -63,7 +64,7 @@
       <p>© {new Date().getFullYear()} {praxis.name} · {praxis.therapeut}</p>
       <div class="flex items-center gap-4">
         <p>Osteopathie in Berlin Prenzlauer Berg</p>
-        <a href="/impressum" class="hover:text-primary-200 transition-colors duration-150">Impressum</a>
+        <a href="{base}/impressum" class="hover:text-primary-200 transition-colors duration-150">Impressum</a>
       </div>
     </div>
   </div>

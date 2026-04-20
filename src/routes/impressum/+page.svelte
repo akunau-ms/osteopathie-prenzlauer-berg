@@ -1,4 +1,5 @@
 <script>
+  import { base } from '$app/paths';
   import SEO from '$lib/components/SEO.svelte';
 </script>
 
@@ -11,7 +12,7 @@
 <section class="pt-32 pb-16 lg:pt-40 lg:pb-20 bg-gradient-to-br from-primary-900 to-primary-700 text-white">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
     <nav class="text-sm text-primary-300 mb-4" aria-label="Breadcrumb">
-      <a href="/" class="hover:text-white transition-colors">Startseite</a>
+      <a href="{base}/" class="hover:text-white transition-colors">Startseite</a>
       <span class="mx-2">›</span>
       <span class="text-white">Impressum</span>
     </nav>

@@ -1,5 +1,6 @@
 <script>
   import { siteContent } from '$lib/data/content.js';
+  import { base } from '$app/paths';
   import CallToAction from '$lib/components/CallToAction.svelte';
   import SEO from '$lib/components/SEO.svelte';
 
@@ -85,7 +86,7 @@
     </p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
       <a
-        href={home.hero.ctaHref}
+        href="{base}{home.hero.ctaHref}"
         class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gold-500 hover:bg-gold-400 text-neutral-900 font-semibold rounded-full text-lg transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
       >
         {home.hero.cta}
@@ -94,7 +95,7 @@
         </svg>
       </a>
       <a
-        href="/osteopathie"
+        href="{base}/osteopathie"
         class="inline-flex items-center justify-center px-8 py-4 border-2 border-primary-400 hover:border-white text-white hover:bg-primary-700 font-semibold rounded-full text-lg transition-all duration-200"
       >
         Mehr erfahren
@@ -122,7 +123,7 @@
           Ich behandle Sie in meiner Praxis in <strong>Berlin Prenzlauer Berg</strong> – zentral gelegen und gut mit öffentlichen Verkehrsmitteln erreichbar.
         </p>
         <div class="mt-8 flex items-center gap-4">
-          <a href="/kontakt" class="inline-flex items-center gap-2 text-primary-700 font-semibold hover:text-primary-600 transition-colors duration-150">
+          <a href="{base}/kontakt" class="inline-flex items-center gap-2 text-primary-700 font-semibold hover:text-primary-600 transition-colors duration-150">
             Zur Praxis →
           </a>
         </div>
@@ -178,7 +179,7 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {#each home.leistungen as leistung}
         <a
-          href={leistung.href}
+          href="{base}{leistung.href}"
           class="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-md border border-neutral-100 hover:border-primary-200 transition-all duration-200 hover:-translate-y-1 flex flex-col"
         >
           <div class="w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center mb-6 group-hover:bg-primary-700 transition-colors duration-200">
