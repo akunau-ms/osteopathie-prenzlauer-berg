@@ -131,7 +131,7 @@
       <div class="bg-primary-50 rounded-3xl p-8 lg:p-10">
         <div class="flex items-start gap-5 mb-6">
           <img
-            src="/images/marco-mathavan.jpg"
+            src="{base}/images/marco-mathavan.jpg"
             alt="Marco Mathavan – Osteopath Berlin Prenzlauer Berg"
             width="90"
             height="120"

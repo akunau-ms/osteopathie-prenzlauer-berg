@@ -62,7 +62,7 @@
 </script>
 
 <svelte:head>
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="{base}/favicon.svg" type="image/svg+xml" />
   <meta name="robots" content="index, follow" />
   {@html `<script type="application/ld+json">${JSON.stringify(localBusinessSchema)}<\/script>`}
 </svelte:head>
