@@ -1,0 +1,5 @@
+# allow crawling everything by default
+User-agent: *
+Allow: /
+
+Sitemap: https://osteopathie-prenzlauer-berg.de/sitemap.xml

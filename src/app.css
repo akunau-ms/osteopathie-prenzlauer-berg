@@ -1,0 +1,49 @@
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/playfair-display/400.css';
+@import '@fontsource/playfair-display/700.css';
+@import 'tailwindcss';
+
+@theme {
+  --color-primary-900: #1a3009;
+  --color-primary-800: #2d5016;
+  --color-primary-700: #3d6b1f;
+  --color-primary-600: #4e8528;
+  --color-primary-500: #6b8f4e;
+  --color-primary-400: #8aad6a;
+  --color-primary-300: #aec98e;
+  --color-primary-200: #cfe3b4;
+  --color-primary-100: #e8f0e0;
+  --color-primary-50: #f4f8ef;
+
+  --color-gold-700: #8b6914;
+  --color-gold-600: #a07b1a;
+  --color-gold-500: #c9a96e;
+  --color-gold-400: #d9bf93;
+  --color-gold-100: #f9f3e8;
+
+  --color-neutral-900: #1a1a1a;
+  --color-neutral-700: #374151;
+  --color-neutral-500: #6b7280;
+  --color-neutral-300: #d1d5db;
+  --color-neutral-100: #f3f4f6;
+  --color-neutral-50: #fafaf8;
+
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-neutral-50);
+  color: var(--color-neutral-900);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+}
